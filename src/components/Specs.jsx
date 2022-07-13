@@ -4,11 +4,12 @@ import React from "react";
 import Price from "./Price";
 
 const Specs = ({ waterBottle, setWaterBottle }) => {
+	const [ name, setName ] = React.useState("");
 	const [ sizeButton, setSizeButton ] = React.useState("small");
 	const [ color, setColor ] = React.useState("Orange");
 	const [ motif, setMotif ] = React.useState(1);
 
-	React.useEffect(() => setWaterBottle({ ...waterBottle, size: sizeButton, color, motif }), [])
+	React.useEffect(() => setWaterBottle({ ...waterBottle, name, size: sizeButton, color, motif }), [])
 
 	return (
 		<div className="specs-container">
@@ -23,7 +24,7 @@ const Specs = ({ waterBottle, setWaterBottle }) => {
 
 					<div className="specs-name">
 						<h3>Ton prénom</h3>
-						<TextField  className="specs-input" label="Entrez votre nom" variant="standard"	/>
+						<TextField onChange={(e) => { setName(e.target.value); setWaterBottle({ ...waterBottle, name }) } } className="specs-input" label="Entrez votre nom" variant="standard"	/>
 					</div>
 
 					<div className="specs-size">
