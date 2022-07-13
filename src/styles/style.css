@@ -38,7 +38,6 @@ h1, h2, h3, h4, h5, h6 {
 	left: 16.1%;
 	top: 25%;
 	position: absolute;
-	width: 211px;
 }
 
 .waterbottle2 {
@@ -48,7 +47,6 @@ h1, h2, h3, h4, h5, h6 {
 	left: 28.3%;
 	top: 18.5%;
 	position: absolute;
-	width: 211px;
 }
 
 .bold-text {
@@ -58,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- Home ---------- */
 
-.home, .paid, .delivery {
+.home, .product, .paid, .delivery {
 	background: url("../assets/home-background.png") no-repeat;
 	background-size: cover;
 	min-height: 100%;
@@ -162,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 	min-width: 100%;
 	position: fixed;
 	top: 0;
+	overflow-y: scroll;
 }
 
 
@@ -727,6 +726,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .delivery-title {
 	font-style: normal;
+	margin-left: 26px;
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 36px;
@@ -767,16 +767,13 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 10px;
 	cursor: pointer;
 	transition: .5s ease-in-out;
+	color: #FF9900;
+	background: white;
+	border: solid 2px #FF9900;
 }
 
 .img-button-ship {
 	margin-right: 16px;
-}
-
-.ship-mode.truck {
-	color: white;
-	background: #FF9900;
-	border: solid 2px #FF9900;
 }
 
 .ship-mode:hover {
@@ -784,10 +781,9 @@ h1, h2, h3, h4, h5, h6 {
 	border: solid 2px #AE4900 !important;
 }
 
-.ship-mode.location {
-	color: #FF9900;
-	background: white;
-	margin-right: 12px;
+.ship-mode.selected {
+	color: white;
+	background: #FF9900;
 	border: solid 2px #FF9900;
 }
 
@@ -832,7 +828,7 @@ h1, h2, h3, h4, h5, h6 {
 .delivery-cart {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	padding: 24px;
 	align-items: flex-start;
 	padding: 24px;
 	width: 449px;
@@ -843,4 +839,131 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	top: 0;
 	left: 110%;
+}
+
+.delivery-price-title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 36px;
+	color: #000000;
+}
+
+.delivery-sub-price {
+	width: 292px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	color: #000000;
+}
+
+.delivery-price {
+	width: 292px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #000000;
+}
+
+.delivery-price-title.margin {
+	margin-bottom: 40px;
+}
+
+.delivery-sub-price.margin {
+	margin-bottom: 10px;
+}
+
+.bottle-square {
+	border: solid 1px #FF9900;
+	background-color: #FFBF3B;
+	width: 280px;
+	height: 300px;
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bottle-square img {
+	height: 280px;
+	transform: rotate(14deg);
+}
+
+.bottle-square a {
+	text-decoration: none;
+}
+
+.button-update {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	width: 97px;
+	height: 48px;
+	background-color: white;
+	position: absolute;
+	top: 80%;
+	left: 40%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: solid 2px transparent;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+	color: #000000;
+}
+
+.button-update:hover {
+	border: solid 2px #AE4900;
+}
+
+.paid-button {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.paid-button a {
+	text-decoration: none;
+}
+
+.paid-button button.cancel {
+	background-color: white !important;
+	color: #000;
+}
+
+.paid-button button {
+	margin: 0px 10px;
+	width: 275px;
+	height: 58px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	padding: 15px 25px;
+	cursor: pointer;
+	justify-content: center;
+	background: #000000;
+	border-radius: 23px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 21.9162px;
+	line-height: 27px;
+	display: flex;
+	align-items: center;
+	color: #FFFFFF;
 }
